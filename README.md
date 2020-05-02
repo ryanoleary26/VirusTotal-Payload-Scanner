@@ -2,7 +2,7 @@
 
 Any files that are given to this script in a .ZIP file will be indivually sent to VirusTotal for scanning using [their v2 API](https://developers.virustotal.com/reference).
 
-#Features
+# Features
 
 
 
@@ -13,12 +13,12 @@ Any files that are given to this script in a .ZIP file will be indivually sent t
 5. Basic API quota usage detection
 6. Option to show scan results from specific Antivirus scanners instead of an overall summary.
 
-#Prerequesites
+# Prerequesites
 
 1. Python
 2. [Requests](https://requests.readthedocs.io/en/master/) module
 
-#How to use
+# How to use
 
 1. To use this script for yourself you will need to obtain a free public API key by [creating an account on the VirusTotal website](https://www.virustotal.com/gui/join-us).
 2. Enter your API key on line 8, see below:
