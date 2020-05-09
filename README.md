@@ -42,4 +42,4 @@ antiviruses = {'Avast', 'AVG', 'BitDefender', 'FireEye', 'F-Secure', 'Malwarebyt
 5. Run the script and enjoy the sexy Antivirus results - Happy Virus Hunting!
 
 ## Example Output
-![Example Output](https://iili.io/J5ypv1.jpg)
+![Example Output](https://iili.io/Jlanb2.jpg)
