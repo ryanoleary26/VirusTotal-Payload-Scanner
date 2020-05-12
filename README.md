@@ -44,10 +44,9 @@ Any files that are given to this script in a .ZIP file will be indivually sent t
 antiviruses = {'Avast', 'AVG', 'BitDefender', 'FireEye', 'F-Secure', 'Malwarebytes', 'McAfee', 'Microsoft'}
 ```
 5. Run the script and enjoy the sexy Antivirus results - Happy Virus Hunting!
-
-## Graph Report
-![Example Output](https://iili.io/J0sjEl.png)
-## Text Reports
-![Example Output](https://iili.io/J0sw42.png)
 ## Example Input
 ![Example Output](https://iili.io/J0sO2S.png)
+## Example Text Reports
+![Example Output](https://iili.io/J0sw42.png)
+## Example Graph Report
+![Example Output](https://iili.io/J0sjEl.png)
