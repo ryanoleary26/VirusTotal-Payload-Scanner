@@ -7,7 +7,7 @@ import matplotlib.pyplot as plotter
 from collections import OrderedDict
 
 #Enter API key here ##########################################################
-api_key = '***REMOVED***'
+api_key = ''
 # Is your API key premium? This restricts access to EXIF output data.
 premiumAPI = False
 ##############################################################################
@@ -17,7 +17,7 @@ antiviruses = {'Avast', 'AVG', 'BitDefender', 'FireEye', 'F-Secure', 'Malwarebyt
 ##########################################################################
 
 #Enter the location of your .ZIP file here #############################
-filePath = "C:/Users/Ryan/Documents/Cowrie/payloads.zip"
+filePath = ""
 ########################################################################
 
 with ZipFile(filePath, 'r') as zipObj:
