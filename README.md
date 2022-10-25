@@ -1,11 +1,10 @@
+# VirusTotal API Payload Scanner
+
 # Analysing Honeypot Payloads with the VirusTotal API
 
 Any files that are given to this script in a .ZIP file will be indivually sent to VirusTotal for scanning using [their v2 API](https://developers.virustotal.com/reference).
 
 # Features
-
-
-
 1. Displays scan reports from over [70 different Antivirus products](https://support.virustotal.com/hc/en-us/articles/115002146809-Contributors).
 2. Creates a file extension summary graph of all payloads scanned.
 3. Provides a URL to each indivudual scan performed.
@@ -14,39 +13,37 @@ Any files that are given to this script in a .ZIP file will be indivually sent t
 6. API usage quota detection
 7. Customisability option to only display results from specified Antivirus engines.
 
-
 # Prerequesites
-
 1. Python 3+
 2. [Requests](https://requests.readthedocs.io/en/master/) module
 3. [Matplotlib](https://matplotlib.org/) module
-4. [OrderedDict](https://docs.python.org/3/library/collections.html#collections.OrderedDict) the [collections](https://docs.python.org/3/library/collections.html) module
+4. PyQt5 module
+5. [OrderedDict](https://docs.python.org/3/library/collections.html#collections.OrderedDict) the [collections](https://docs.python.org/3/library/collections.html) module
 
 # How to use
-
 1. To use this script for yourself you will need to obtain a free public API key by [creating an account on the VirusTotal website](https://www.virustotal.com/gui/join-us).
-2. Enter your API key on line 10, see below:
+2. Provide your API key, see below:
 
   ```
   #Enter API key here ########
   api_key = '<API KEY HERE>' #
   ############################
   ```
-3. Enter the file path of the ZIP file you wish to use on line 18, see below. Note that currentlyy files that are contained within sub-directories of the ZIP file are currently not scanned. To get round this seperate groups of files into seperate ZIP files until I implement this feature.
+3. You must specifiy whether you have access to the premium API. Certain functionality of this script is dependant on access to the Academic/Premium API. 
+    ```
+    # Is your API key premium? This restricts access to EXIF output data.
+    premiumAPI = False
+    ```
+4. Enter the file path of the ZIP file you wish to use, see below. Note that this script does not handle nested file structures. All files MUST be in the root folder of the ZIP.
 ```
-  #Enter the location of your .ZIP file here ######
-  with ZipFile('<FILE PATH HERE>', 'r') as zipObj:#
-  #################################################
+  #Enter the location of your .ZIP file here #
+  filePath = '<FILE PATH HERE>'              #
+  ############################################
 ```
-4. Line 14 contains a dictionary of Antivirus (AV) names to include in the scan output. Add or remove Antivirus names from this dictionary as you please. The default configuration will include Avast, AVG, BitDefender, FireEye, F-Secure, McAfee and Microsoft in the specific scan result output. This **IS** case sensitive.
+5. Choose the antivirus (AV) partners to include in the scan output. The default configuration includes Avast, AVG, BitDefender, FireEye, F-Secure, McAfee and Microsoft in the specific scan result output. This **IS** case sensitive.
 ```
-#Customise the scan output by changing the included AV names here. This IS case and space sensitive.
-antiviruses = {'Avast', 'AVG', 'BitDefender', 'FireEye', 'F-Secure', 'Malwarebytes', 'McAfee', 'Microsoft'}
+# Customise the scan output by changing the included AV names here. This IS case and space sensitive.
+antiviruses = {'Avast', 'AVG', 'BitDefender', 'FireEye','F-Secure', 'Malwarebytes', 'McAfee', 'Microsoft'}
 ```
-5. Run the script and enjoy the sexy Antivirus results - Happy Virus Hunting!
-## Example Input
-![Example Output](https://iili.io/J0sO2S.png)
-## Example Text Reports
-![Example Output](https://iili.io/J0sw42.png)
-## Example Graph Report
-![Example Output](https://iili.io/J0sjEl.png)
+6. Run the script and enjoy the sexy Antivirus results - Happy Virus Hunting!
+"""
